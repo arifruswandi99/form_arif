@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Klinik Cantik Sehat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fdf6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #e91e63;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f8bbd0;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #880e4f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #e91e63;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .slider {
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 12px;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(233, 30, 99, 0.7);
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 50%;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .input-box {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    button {
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d81b60;
+    }
+
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    #hasilDiagnosa {
+      margin-top: 15px;
+      white-space: pre-line;
+      font-weight: bold;
+      color: #880e4f;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .slides img {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Klinik Cantik Sehat</h1>
+    <p>Perawatan Kecantikan dan Diagnosa Penyakit Kulit Profesional</p>
+  </header>
+
+  <nav>
+    <a href="#layanan">Layanan</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#diagnosa">Diagnosa</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <section id="layanan">
+    <h2>Layanan Kami</h2>
+    <ul>
+      <li>
+        <h3>Facial dan Perawatan Wajah</h3>
+        <img src="gambar5.jpg" alt="Facial dan Perawatan Wajah" style="width:100%; max-width: 300px; height: auto; border-radius: 8px;">
+        <p>Perawatan wajah untuk memberikan kelembaban dan kesegaran pada kulit wajah.</p>
+      </li>
+      <li>
+        <h3>Laser Treatment</h3>
+        <img src="gambar6.jpeg" alt="Laser Treatment" style="width:100%; max-width: 300px; height: auto; border-radius: 8px;">
+        <p>Perawatan dengan teknologi laser untuk mengatasi masalah kulit seperti flek hitam dan bekas jerawat.</p>
+      </li>
+      <li>
+        <h3>Penghilangan Bekas Jerawat</h3>
+        <img src="gambar1.jpg" alt="Penghilangan Bekas Jerawat" style="width:100%; max-width: 300px; height: auto; border-radius: 8px;">
+        <p>Perawatan khusus untuk menghilangkan bekas jerawat dan mengembalikan tekstur kulit.</p>
+      </li>
+      <li>
+        <h3>Skin Rejuvenation</h3>
+        <img src="gambar7.jpg" alt="Skin Rejuvenation" style="width:100%; max-width: 300px; height: auto; border-radius: 8px;">
+        <p>Perawatan untuk meremajakan kulit dan mengurangi tanda-tanda penuaan.</p>
+      </li>
+      <li>
+        <h3>Konsultasi Dokter Kulit</h3>
+        <img src="gambar9.png" alt="Konsultasi Dokter Kulit" style="width:100%; max-width: 300px; height: auto; border-radius: 8px;">
+        <img src="gambar8.jpg" alt="Konsultasi Dokter Kulit" style="width:100%; max-width: 300px; height: auto; border-radius: 8px;">
+        <p>Diskusikan masalah kulit Anda dengan dokter kulit profesional kami.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="galeri">
+    <h2>Galeri Hasil Perawatan</h2>
+    <div class="slider">
+      <div class="slides" id="slide-container">
+        <img src="gambar1.jpg" alt="Gambar 1">
+        <img src="gambar2.jpg" alt="Gambar 2">
+        <img src="gambar3.jpg" alt="Gambar 3">
+        <img src="gambar4.jpg" alt="Gambar 4">
+      </div>
+      <button class="nav prev" onclick="prevSlide()">&#10094;</button>
+      <button class="nav next" onclick="nextSlide()">&#10095;</button>
+    </div>
+  </section>
+
+  <section id="diagnosa">
+    <h2>Diagnosa Penyakit Kulit</h2>
+    <form id="diagnosaForm" onsubmit="diagnosa(); return false;">
+      <div class="form-group">
+        <label for="nama">Nama Pasien:</label>
+        <input type="text" id="nama" class="input-box" required>
+      </div>
+    
+      <div class="form-group">
+        <label for="umur">Umur:</label>
+        <input type="number" id="umur" class="input-box" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" id="email" class="input-box" required>
+      </div>
+      <div class="form-group">
+        <label for="alamat">Alamat:</label>
+        <textarea id="alamat" class="input-box" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <p>Pilih gejala:</p>
+        <label><input type="checkbox" name="gejala" value="jerawat"> Jerawat</label>
+        <label><input type="checkbox" name="gejala" value="kemerahan"> Kemerahan</label>
+        <label><input type="checkbox" name="gejala" value="gatal"> Gatal</label>
+        <label><input type="checkbox" name="gejala" value="bersisik"> Bersisik</label>
+        <label><input type="checkbox" name="gejala" value="bercak_putih"> Bercak Putih</label>
+      </div>
+
+      <button type="submit">Diagnosa</button>
+    </form>
+
+    <p id="hasilDiagnosa"></p>
+  </section>
+
+  <section id="kontak">
+    <h2>Kontak Kami</h2>
+    <p>Alamat: Jl. Anggrek No. 123, Jakarta</p>
+    <p>Telepon: (021) 555-1234</p>
+    <p>Email: info@klinikKecantikansehat.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Klinik Kecantikan Sehat. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let currentIndex = 0;
+    const slides = document.getElementById('slide-container');
+    const totalSlides = slides.children.length;
+
+    function updateSlide() {
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlide();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlide();
+    }
+
+    setInterval(nextSlide, 5000);
+
+    function diagnosa() {
+      const nama = document.getElementById('nama').value;
+      const alamat = document.getElementById('alamat').value;
+      const umur = document.getElementById('umur').value;
+      const hasil = document.getElementById('hasilDiagnosa');
+      const gejala = document.querySelectorAll('input[name="gejala"]:checked');
+
+      if (gejala.length === 0) {
+        hasil.innerText = "Silakan pilih setidaknya satu gejala.";
+        return;
+      }
+
+      let output = `Nama: ${nama}\nAlamat: ${alamat}\nUmur: ${umur}\n\nHasil Diagnosa:\n`;
+
+      gejala.forEach(item => {
+        switch(item.value) {
+          case "jerawat":
+            output += "• Jerawat: Jaga kebersihan wajah dan konsultasikan ke dokter.\n";
+            break;
+          case "kemerahan":
+            output += "• Kemerahan: Mungkin akibat iritasi atau alergi.\n";
+            break;
+          case "gatal":
+            output += "• Gatal: Bisa karena alergi atau infeksi kulit.\n";
+            break;
+          case "bersisik":
+            output += "• Bersisik: Bisa jadi eksim atau psoriasis.\n";
+            break;
+          case "bercak_putih":
+            output += "• Bercak Putih: Kemungkinan vitiligo atau jamur.\n";
+            break;
+        }
+      });
+
+      hasil.innerText = output;
+    }
+  </script>
+
+</body>
+</html>
